@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #cccccc;
+        }
+        .bg1{
+            background: url(images/bg1.png);
+            height: 569px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            animation: moveBg 50s linear infinite;
+        }
+        .bg2{
+            background: url(images/bg2.png);
+            height: 336px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            animation: moveBg 40s linear infinite;
+        }
+        .bear{
+            width: 200px;
+            height: 100px;
+            background: url(images/bear.png);
+            animation: moveBg 1s steps(7) infinite, moveBear 8s linear 1 forwards;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        @keyframes moveBg {
+            0%{
+                background-position-x: 0px;
+            }
+            100%{
+                background-position-x: 100%;
+            }
+        }
+
+        @keyframes moveBear {
+            0%{
+                left: 0;
+            }
+            100%{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bear"></div>
+</body>
+</html>
